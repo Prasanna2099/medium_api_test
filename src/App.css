@@ -12,7 +12,7 @@
 
 .post-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Display in 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* Display in 3 columns by default */
   grid-gap: 20px;
 }
 
@@ -38,4 +38,11 @@
   margin: 0 auto; /* Center the image */
   max-width: 100%; /* Ensure the image does not exceed its container's width */
   height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Query for Phone Resolutions */
+@media (max-width: 768px) {
+  .post-container {
+    grid-template-columns: repeat(1, 1fr); /* Display in 1 column for phone resolutions */
+  }
 }
